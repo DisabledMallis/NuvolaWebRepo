@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        body { background: #111827; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- Load components before main app -->
+    <script type="text/babel" src="Clickgui/clickgui.js"></script>
+    <script type="text/babel" src="Management/management.js"></script>
+    <!-- Load main app last -->
+    <script type="text/babel" src="js/design.js"></script>
+    <script type="text/babel" src="game/game.js"></script>
+</body>
+</html>

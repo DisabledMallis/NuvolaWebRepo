@@ -2,147 +2,25 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuvola Website</title>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <!-- External jQuery link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="favicon.ico">
-    <style>
-        /* Your existing styles */
-        .ly-secondary { 
-            background-color: #121212;
-        }
-        .ly-dark {
-            background-color: rgba(25, 25, 25, 255);
-        }
-        .ly-nav-dark {
-            background-color: rgba(35, 35, 35, 255);
-        }
-        .epicBackground {
-            background-attachment: fixed;
-            background-position: top;
-        }
-        .Main {
-            background-color: rgba(0, 0, 0, 0);
-        }
-        .backLogo {
-            background-color: rgba(0, 0, 0, .8);
-            padding-top: 6px;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 10px;
-        }
-        .animated-text {
-            animation: fadeInUp 2s ease-in-out;
-        }
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .card-no-bg {
-            background-color: transparent;
-            border: none;
-        }
-    </style>
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            var images = ['doofen.gif', 'leDance.gif', 'spongeman.gif', 'fire.gif'];
-            document.getElementsByClassName('epicBackground')[0].style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
-        });
-        
-        // Function to add and remove the custom animation classes
-        function showModal() {
-            $('#betaWarn').modal('show');
-            $('#betaWarn .modal-dialog').addClass('zoomIn').removeClass('zoomOut');
-        }
-
-        function hideModal() {
-            $('#betaWarn .modal-dialog').addClass('zoomOut').removeClass('zoomIn');
-            setTimeout(function() {
-                $('#betaWarn').modal('hide');
-            }, 300); // Duration of the animation
-        }
-    </script>
+    <title>Nuvola Navigation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+   
 </head>
-<body class="text-light ly-secondary epicBackground">
-    <div class="modal" id="betaWarn" tabindex="-1" role="dialog" data-backdrop="static">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-dark">Nuvola is in Beta stages!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="hideModal()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-dark">Nuvola is currently in beta stages, meaning there are lots of issues. We want to ensure that Nuvola will be the best it can, so if you find any issues please get in contact with us on <a href="https://discord.gg/xgBsdSZNB7">Discord</a>.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="hideModal()">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark ly-nav-dark shadow-sm p-3 mb-5">
-        <a class="navbar-brand" href="">Nuvola<span class="badge badge-light">Beta</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#Download">Download</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#Instructions">Instructions</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://discord.gg/xgBsdSZNB7">Discord</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div id="" class="jumbotron ly-secondary Main">
-        <h1 class="display-1 text-center"><span class="badge badge-dark ly-dark animated-text">Nuvola</span><span class="badge badge-light" data-toggle="modal" data-target="#betaWarn">Beta</span></h1>
-        <h5 class="display-5 text-center"><span class="backLogo">A Minecraft: Bedrock Edition utility mod from the future</span></h5>
-    </div>
-    <div id="Download" class="jumbotron ly-dark Download">
-        <h1 class="display-3 text-center">Download</h1>
-        <h5 class="display-5 text-center">Latest version: Public Beta</h5>
-        <div class="d-flex justify-content-center mt-4">
-            <div class="card card-no-bg text-white shadow-lg" style="width: 300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Download Nuvola</h5>
-                    <p class="card-text">Download the Nuvola DLL directly to use with your own injector.</p>
-                    <button type="button" class="btn btn-light btn-lg btn-block" onclick="window.location.href='https://github.com/DisabledMallis/NuvolaWebRepo/releases';">Download</button>
-                </div>
-            </div>
-            <div class="ml-4 card card-no-bg text-white shadow-lg" style="width: 300px;">
-                <div class="card-body">
-                    <h5 class="card-title">Jiayi Import</h5>
-                    <p class="card-text">Import Nuvola into Jiayi automatically using Jiayi launcher.</p>
-                    <button type="button" class="btn btn-light btn-lg btn-block" onclick="window.location.href='jiayi://addmod/https://github.com/DisabledMallis/NuvolaWebRepo/releases/latest/download/Nuvola.dll';">Import</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="Instructions" class="jumbotron ly-dark Download">
-        <h1 class="display-3 text-center">Instructions</h1>
-        <h5 class="display-5 text-center animated-text">You can either use <a href="https://github.com/fligger/FateInjector/releases/download/1.0/FateInjector.exe">Fate Injector</a> or <a href="https://github.com/JiayiSoftware/JiayiLauncher/releases">Jiayi Launcher</a>.</h5>
-    </div>
+<body class="bg-gray-900">
+    <div id="root"></div>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script type="text/babel" src="js/toolbar.js"></script>
+    <script type="text/babel" src="js/timeline.js"></script>
+    <script type="text/babel" src="js/scrambletext.js"></script>
+    <script type="text/babel" src="js/slidemenu.js"></script>
+    <script type="text/babel" src="Discord/discord.js"></script>
+    <script type="text/babel" src="js/download.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
 </body>
 </html>
